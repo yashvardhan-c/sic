@@ -1,1 +1,61 @@
 DAY2
+Data structure: Storing and arranging data in memory in some particular way so as to achieve some efficiency
+
+ARRAY:
+Array is a data structure where elements are stored in continous memory locations
+Simplest DS and easy to use with help of subscript
+Array is time efficient data structure
+Array is space inefficient data structure
+Accessing any unit in Array is BigO(1)
+
+NOTE:
+The DS to which we can apply subscript is called ordered DS
+
+LINKED LISTS:
+Linked list is space efficient data structure
+Linked list is time inefficient data structure
+Accessing any unit in Linked list is BigO(n)
+
+Space time trade-off: Compromising one of the quantity for the other
+
+how exactly elements are stored is physical view
+how exactly elements are seen is conceptual / logical view
+
+ARITHMETIC OPERATORS:
++ - * / // % **
+I/P are numbers
+O/P is number
+All are binary operators
+uses infix notation
+ALl operators except ** have left to right associativity
+5 + 5.5
+Here 5 is implicity casted to float and then the addition is done.
+The precedence of + and - is less than the other
+what is evaluated first is the operator having highest precedence i.e., **
+therefore precedence operator takes over the associativity
+The infix notation expressions are converted to postfix and then evaluated
+
+1.convert infix expression to postfix
+2.evaluate postfix expression
+3.find Nth term of the series 1 2 2 3 3 5 5 7 8 11 13 13
+Odd terms:  1 2 3 5  8  13 21(fibonaccci series)
+Even terms: 2 3 5 7 11 13(prime series)
+when n is odd print (n/2)+1th term from fibonaccci series
+when n is even print (n/2)th term from prime series
+
+4.Accept a number and find the next smallest possible bigger number that must have all digits as the input number. If such a number is not possible to be created then print not possible
+i/p num stored in Array
+re arrange the numbers and check if it is greater than the input number in a loop and store the smallest larger number in another variable
+print the variable as output
+
+Start from units place
+Look for the next digit which is smaller than the current digit
+Mark the position of the smallest digit
+swap digits ( ?? )
+Sort digits after the position in ?? order 
+
+Do we have a main function in python? 
+Yes we have
+the global code is implicity put into __main__()
+
+Stratergy used across is functional programming
