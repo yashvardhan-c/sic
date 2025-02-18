@@ -17,10 +17,10 @@ Linked list is time inefficient data structure
 Accessing any unit in Linked list is BigO(n)
 
 Space time trade-off: Compromising one of the quantity for the other
-
+----------------------------------------------------------------------------------------------------------------------------------------
 how exactly elements are stored is physical view
 how exactly elements are seen is conceptual / logical view
-
+----------------------------------------------------------------------------------------------------------------------------------------
 ARITHMETIC OPERATORS:
 + - * / // % **
 I/P are numbers
@@ -34,7 +34,7 @@ The precedence of + and - is less than the other
 what is evaluated first is the operator having highest precedence i.e., **
 therefore precedence operator takes over the associativity
 The infix notation expressions are converted to postfix and then evaluated
-
+----------------------------------------------------------------------------------------------------------------------------------------
 1.convert infix expression to postfix
 2.evaluate postfix expression
 3.find Nth term of the series 1 2 2 3 3 5 5 7 8 11 13 13
@@ -53,9 +53,70 @@ Look for the next digit which is smaller than the current digit
 Mark the position of the smallest digit
 swap digits ( ?? )
 Sort digits after the position in ?? order 
-
+----------------------------------------------------------------------------------------------------------------------------------------
 Do we have a main function in python? 
 Yes we have
 the global code is implicity put into __main__()
+----------------------------------------------------------------------------------------------------------------------------------------
+Stratergy used across in software industry is functional programming
 
-Stratergy used across is functional programming
+----------------------------------------------------------------------------------------------------------------------------------------
+Notations:
+
+Big-Oh (O):
+1.Usually used to find worst case efficiency
+2.Finds the efficiency on the i/p size (n)
+3.However worst best and average(all 3) efficiency can be found
+4.Its purpose is not to find the exact efficiency. Rather it is to find the ORDER in which the algorithm is.
+Eg. linear,quadratic,factorial,square root,logarithmic etc 
+5.It considers the input size 'n' to be very big. Thus it gives efficiency for large data.
+6. Remove the constants from the efficiency to get only the order
+
+----------------------------------------------------------------------------------------------------------------------------------------
+LINEAR SEARCH:
+Number of elements as input: N 
+best case efficiency (BCE): O(1)
+worst case efficiency (WCE): O(n)
+average case efficiency (ACE): O(n)
+----------------------------------------------------------------------------------------------------------------------------------------
+BINARY SEARCH
+Pre requisite: The elements in the DS must be sorted
+
+Number of elements as input: N 
+Let us assume the number of iterations: X
+1st      2nd      3rd              last-2 last-1  last 
+ N       N/2      N/4    ........    4       2     1
+2(x-1)  2(x-2)  2(x-3)              2(2)   2(1)   2(0)
+
+N = 2(x-1)
+N = 2(x) (ignore -1)
+X = Log(N)
+
+best case efficiency (BCE): O(1)
+worst case efficiency (WCE): O(Log(N))
+average case efficiency (ACE):Log(N)
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Frame: A frame is a memory allocated to a function during runtime 
+Special Purpose Registers
+IR 
+PC 
+FP 
+SP 
+Accumilator
+Function call Stack (System stack)
+
+Technically End of Program is when stack pointer and frame pointer is null
+During start of the program the frame pointer points to frame of main function
+----------------------------------------------------------------------------------------------------------------------------------------
+Command Line Arguments
+Passing data to the program from the command line 
+$ python program_name.py
+$ python program_name.py 10 20 30
+here 10 20 30 are the command line arguments
+However the script name itself(program_name) is also sent as one of the argument, precisely as the first argument
+All arguments are always passed as strings
+These arguments are stored by the OS in memory in an array and the reference(address) of the array is passed by the OS to the programmer which is copied to sys.argv
+----------------------------------------------------------------------------------------------------------------------------------------
+
+python debugger

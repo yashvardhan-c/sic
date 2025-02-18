@@ -1,0 +1,6 @@
+check if the prev instructions are correct:
+names
+spacing
+comments
+correctness
+write what was modified after saving the initial code in comments (documentation)
