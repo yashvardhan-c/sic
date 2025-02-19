@@ -260,6 +260,10 @@ recharges(id,amount,mem_id,date)
 Transactions(id,mem_id,amount,game_id)
 
 collections(id,date,amount)
+
+desc <tablename>;
+provides metadata of the table
+
 -----------------------------------------------------------------------------------------------
 
 connect to Mysql from python
