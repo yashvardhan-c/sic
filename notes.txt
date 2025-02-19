@@ -169,7 +169,7 @@ location    varchar
 gender      varchar(2)      check(regex) (user should enter m/f[case insensitive])
 
 databases should be named in plural in sql
-create table persons(id int primary key auto_increment, name varchar(32)0 not null, age tinyint, location varchar(32), gender varchar(1) check())auto_increment(101,2);
+create table persons(id int primary key auto_increment, name varchar(32) not null, age tinyint, location varchar(32), gender varchar(1) check())auto_increment(101,2);
 
 insert into persons(name, age, gender) values('nithin',40,'m')
 
@@ -192,3 +192,83 @@ DML-Data manipulation Language   insert,delete,update
 TCL-Transaction control Language savepoint,commit,roleback
 DRL-Data retreival Language      select
 DCL-Data control Language        grant,control
+
+1. print all the employee details who salary is below 1 lakh
+select * from employees where salary<100000;
+
+2. list employee name and designation whose name starts with A
+select name,designation from employees where name like 'a%';
+
+3. list name and ph.no. of the employees who havent got comission for this month
+select name, phone_number from employees where comission is null;
+(use this)
+(checks if hte cell value of comission in the rwow is empty )
+
+select name, phone_number from employees where comission = null;
+(check the cell value in the table with the variable named null)
+
+select name, phone_number from employees where comission = 'null';
+(check the cell value in the table with the string literal(constant value) 'null')
+
+4. delete all rows from the table
+delete from employees;
+(deletes the data in the table(all rows), but the auto_increment and meta data persists i.e., the new row gets the id, which is a continued value)
+
+truncate table employees;
+(deletes the data in the table(all rows),and the auto_increment but the meta data persists i.e., the new row added later will get id 1)
+
+drop table employees;
+(all data is deleted)
+
+CRUD operations:
+C create (insert) One record 
+R Read/Retreive   One tuple
+U Update          One row
+D Delete          One row
+List all rows
+
+insert into employees(name,technology,designation,salary,comission,phone_number,date_of_joining,years_of_experience) values('yash','c','software tester',90000,2000,243453454,'2023-09-12',5);
+
+select * from employees where id = 1;
+update employees set salary = 145000 where id=1;
+delete from employees where id = 5;
+select * from employees;
+
+These are the most frequently uesd operations.
+In RestFul APIs, which uses the HTTP protocol,
+We perform the following operations using the VERBS:
+1. POST      for insert
+2. GET       for Read/select
+3. PUT/PATCH for update (with id)
+4. DELETE    for delete (with id)
+5. GET with  id for reading one
+
+before grouping where
+for grouping use group by
+after grouping having
+
+saved queries are known as views
+
+tables for a club
+
+members(id, name, wallet_bal,phone_number, dob, gender)
+
+games(id,name,price_per_head, min_count, max_count, duration, description)
+
+recharges(id,amount,mem_id,date)
+
+Transactions(id,mem_id,amount,game_id)
+
+collections(id,date,amount)
+-----------------------------------------------------------------------------------------------
+
+connect to Mysql from python
+and perform the operations on the database 
+
+hostname
+portnumber
+username
+password
+database
+charset
+
