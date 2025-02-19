@@ -17,10 +17,10 @@ Linked list is time inefficient data structure
 Accessing any unit in Linked list is BigO(n)
 
 Space time trade-off: Compromising one of the quantity for the other
-----------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
 how exactly elements are stored is physical view
 how exactly elements are seen is conceptual / logical view
-----------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
 ARITHMETIC OPERATORS:
 + - * / // % **
 I/P are numbers
@@ -34,7 +34,7 @@ The precedence of + and - is less than the other
 what is evaluated first is the operator having highest precedence i.e., **
 therefore precedence operator takes over the associativity
 The infix notation expressions are converted to postfix and then evaluated
-----------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
 1.convert infix expression to postfix
 2.evaluate postfix expression
 3.find Nth term of the series 1 2 2 3 3 5 5 7 8 11 13 13
@@ -53,14 +53,14 @@ Look for the next digit which is smaller than the current digit
 Mark the position of the smallest digit
 swap digits ( ?? )
 Sort digits after the position in ?? order 
-----------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
 Do we have a main function in python? 
 Yes we have
 the global code is implicity put into __main__()
-----------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
 Stratergy used across in software industry is functional programming
 
-----------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
 Notations:
 
 Big-Oh (O):
@@ -72,13 +72,13 @@ Eg. linear,quadratic,factorial,square root,logarithmic etc
 5.It considers the input size 'n' to be very big. Thus it gives efficiency for large data.
 6. Remove the constants from the efficiency to get only the order
 
-----------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
 LINEAR SEARCH:
 Number of elements as input: N 
 best case efficiency (BCE): O(1)
 worst case efficiency (WCE): O(n)
 average case efficiency (ACE): O(n)
-----------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
 BINARY SEARCH
 Pre requisite: The elements in the DS must be sorted
 
@@ -95,7 +95,7 @@ X = Log(N)
 best case efficiency (BCE): O(1)
 worst case efficiency (WCE): O(Log(N))
 average case efficiency (ACE):Log(N)
-----------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
 
 Frame: A frame is a memory allocated to a function during runtime 
 Special Purpose Registers
@@ -108,7 +108,7 @@ Function call Stack (System stack)
 
 Technically End of Program is when stack pointer and frame pointer is null
 During start of the program the frame pointer points to frame of main function
-----------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
 Command Line Arguments
 Passing data to the program from the command line 
 $ python program_name.py
@@ -117,6 +117,78 @@ here 10 20 30 are the command line arguments
 However the script name itself(program_name) is also sent as one of the argument, precisely as the first argument
 All arguments are always passed as strings
 These arguments are stored by the OS in memory in an array and the reference(address) of the array is passed by the OS to the programmer which is copied to sys.argv
-----------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
 
 python debugger
+
+----------------------------------------------------------------------------------------------
+DAY3
+
+QUICK SORT
+orange partitioning hacker-rank problem explanation with solution
+1 2 3 4 5<-pivot
+efficiency of partitioning: O(n)[because of the presence of for loop]
+quick sort should be informed about the position of partitioning therefore it has to return the posisition[index] of the pivot
+apply recursively
+
+
+best case efficiency (BCE) : n*Log(n)
+worst case efficiency (WCE) : O(n**2)
+average case efficiency (ACE) : O(n*Log(n))  
+
+NOTE: Lists are accessed in functions by call by reference
+----------------------------------------------------------------------------------------------
+
+Datatypes in Mysql:
+
+numbers:   (relation in java)
+tinyint     byte
+smallint    short
+int         int 
+bigint      long
+date 
+
+varchar     string 
+float       decimal number
+
+Constraints:
+check
+default
+unique
+not null
+auto increment
+primary key
+references
+
+Table 1
+person      
+id          int             primary key     auto increment
+name        varchar(64)     not null
+age         tinyint         
+location    varchar
+gender      varchar(2)      check(regex) (user should enter m/f[case insensitive])
+
+databases should be named in plural in sql
+create table persons(id int primary key auto_increment, name varchar(32)0 not null, age tinyint, location varchar(32), gender varchar(1) check())auto_increment(101,2);
+
+insert into persons(name, age, gender) values('nithin',40,'m')
+
+Table 2
+employee
+id                  int             primary key     auto_increment
+name                varchar(32)     not null
+technology          varchar(32)
+designation         varchar(32) 
+salary              float           default(10000)
+comission           float
+phone_number        bigint          unique
+date_of_joining     datetime        default getdate()
+years_of_experience tinyint         not null
+
+
+SQL 
+DDL-Data defenition Language     create,alter,drop,truncate
+DML-Data manipulation Language   insert,delete,update
+TCL-Transaction control Language savepoint,commit,roleback
+DRL-Data retreival Language      select
+DCL-Data control Language        grant,control
