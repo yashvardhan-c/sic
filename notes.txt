@@ -276,3 +276,64 @@ password
 database
 charset
 
+-----------------------------------------------------------------------------------------------
+
+DAY4:
+
+Insertion Sort: Optimistic Sort
+Technique is decrease and conquer
+
+Insertion sort fails when the input array is very large
+
+from 2nd element to last element of unsorted array:
+    copy current element into element
+    j = index of element -1
+    i = index of last element in sorted array
+    while j >= 0 and element < current element in sorted array:
+        sorted_array[j+1] = sorted array[j]
+        j--
+    sorted_array[j+1] = element
+
+
+for i in range (l,len(array)):
+    j = i-1
+    element = array[i]
+    while j >= 0 and element < array[j]:
+        array[j+1] = array[j]
+        j--
+    array[j+1] = element
+
+1. Implement Insertion sort on case insensitive string
+2. Find sum of odd placed even digits in a number
+
+merge sort: stable sorting Technique
+has same efficiency in all 3 scenarios
+
+def merge_sort(numbers,low,high):
+    if low < high:
+        #mid = (low+high)//2
+        mid = (low + (high - low ) // 2)
+        merge_sort(numbers, low, mid-1)
+        merge_sort(numbers,mid,high)
+        merge(numbers,low,mid,high)
+
+#while i < len(array1) and j < len(array2):
+
+def merge(numbers, low, mid, high):
+    copy 1st half of array to array1
+    copy 2nd half of array to array2
+    merged_array = []
+    k = 0
+    i = low
+    j = mid
+    while array1 and array2 has numbers:
+        if array1[i] < array2[j]:
+            merged_array[k] = array1[i]
+            i+=1
+        else:
+            merged_array[k] = array2[j]
+            j+=1
+        k+=1
+    merged_array += array1[i:]
+    merged_array += array2[j:]
+    

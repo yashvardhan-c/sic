@@ -4,3 +4,13 @@ spacing
 comments
 correctness
 write what was modified after saving the initial code in comments (documentation)
+
+What to Learn in every algorithm
+How does it work
+Stratergy
+best case efficiency
+worst case efficiency
+best and worst case scenarios
+pseudocode and implementation
+opitmization
+Applications(where to use and where not to use)

@@ -23,3 +23,10 @@ C-DAC- research and dev after engg
 By govt of india
 
 NPTEL
+
+Learn modern c++ (11,14[covers 90%],17,20,23,[covers 10%])
+demand is more, supply is less
+
+dsa and algorithms after basic ds and searching and sorting algorithms
+
+industry is switching over from OOP to functional programming
