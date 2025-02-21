@@ -361,3 +361,52 @@ Best case efficiency (BCE): O(n)
 worst case efficiency (WCE): O(n**2)
 
 Stacks and Queues using Lists
+
+---------------------------------------------------------------------------------------
+
+Day5
+
+TREE 
+>tree is a acyclic DS
+>A tree has an entry point called as ROOT 
+>The data is stored in nodes of a tree
+>the nodes are stored in such a way that, one related to the other in Parent-child relationship
+>If you descend a tree, the immediately reachable node(s) are said to be the child node(s)
+>the current node thus becomes the Parent node
+>Reaching a child node and then to its child node and so on is known as traversing
+>thus to reach any node of a tree has unique path 
+>The root of the tree is said to be at level 1
+>the child node(s) of the root is said to be at level 2 and so on
+>the highest possible level is said to be the depth or height of the tree
+>and this also is the longest possible path in the tree
+>if every node in the tree has a maximum of 2 nodes then it is known as binary tree
+>the 2 child nodes of the parent node can be termed as LEFT CHILD NODE and RIGHT CHILD NODE
+>from the left child of the tree thst can be traversed along with the left child itself, is said to be LEFT SUB TREE and on similar lines we have RIGHT SUB TREE
+>for a given depth/height of say N, we can have atmost 2(N)-1 nodes in a binary tree
+>IF in a binary tree, every node has exactly 0 or 2 child nodes then such a tree is called STRICT BINARY TREE
+>if a binary tree is said to have 2(N)-1 nodes in it, then it is said to be COMPLETE BINARY TREE
+>if a binary tree has nearly 2(N)-1 nodes or exactly then it is said to be well balanced and thus the term BALANCED BT 
+>thus we can derive what can be a imbalanced binary tree
+>As we traverse a BT, moving to the left child or moving to the right child and so on, we observe that we are isolating the nodes in all other paths
+>this traversing if done in a disciplined fashion/pattern this it is recursive in nature
+>thus Reaching every new node while traversing, we can comsider that node itself as Root and it and its descendants make a binary tree by itself
+>If in a BT, the nodes are arranged in such a way that the left child node of any node in the tree has data smaller than the data in itself and the right child node has data greater than or equal to its own data (and this is consistent in entire tree) then such a BT is known as BINARY SEARCH TREE
+>if in a BST, there are only left( or right) child nodes and we apply search, then its efficiency is O(n) 
+>However in a BST of level N we can have 2(N)-1 nodes, So in a BST with level N having N nodes is the worst possible BST ( or even BT)
+>if a BST is complete binary tree or Balanced BT, then a search would yield a efficiency of O(LogN) because with every traversal, we make away with exactly(nearly) half of the nodes of a tree
+>if we traverse the entire BT in the pattern L-R`-R then it is said to be in inorder
+>if we traverse the entire BT in the pattern R`-L-R then it is said to be in preorder
+>if we traverse the entire BT in the pattern L-R-R` then it is said to be in postorder
+>Applying inorder traversal in a BST gives us the data in increasing order
+>A node having no child nodes is said to be a leaf node
+>we always add the new node in a BST as a leaf node
+>Adding/deleting a node from a BST hampers the balancing of the tree
+
+>Deleteing a node from a BST can be divided into 3:
+1. when the node to be deleted is a leaf node(with zero child nodes)
+in this case , you just have to make the respective link to its parent null
+
+2. When the node to be deleted has one child node, then the child node of the node to be deleted will be the same child as it was to    its parent in other words the child node of the node being deletd will replace it
+
+3. when we are deleting a node with 2 child nodes, then the right child of the node being deleted, becomes the right child of its parent(child node will take its place) and the left child of the node being deleted along with its sub tree, should be made child of the left most child of the right child
+
