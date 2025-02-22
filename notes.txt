@@ -410,3 +410,18 @@ in this case , you just have to make the respective link to its parent null
 
 3. when we are deleting a node with 2 child nodes, then the right child of the node being deleted, becomes the right child of its parent(child node will take its place) and the left child of the node being deleted along with its sub tree, should be made child of the left most child of the right child
 
+CERTIFICATE PROJECT CREATION
+
+>read data from .csv and print them on console
+>read data from user/console and write it to a .txt file
+>read person data from the console and write it to .dat file
+>read data from binary file (.dat file) and print the object data on console
+
+>create a html template for the certificate 
+>introduce variables in the html template for USN and NAME 
+>read data from .csv file (one student data ) and insert in html file
+>read data from .csv file (multiple student data ) and insert in html files
+
+>program to convert .html to .pdf file
+>read rows (student data) from .csv file and create the html and insert the data into the html,  Lastly convert the .html files into .pdf
+>Create .zip or .rar for all the pdf files. 
