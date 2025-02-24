@@ -425,3 +425,51 @@ CERTIFICATE PROJECT CREATION
 >program to convert .html to .pdf file
 >read rows (student data) from .csv file and create the html and insert the data into the html,  Lastly convert the .html files into .pdf
 >Create .zip or .rar for all the pdf files. 
+
+--------------------------------------------------------------------------------------------------------
+Day 7:
+HACKATHON PROBLEMS:
+
+1. Car wash app
+sales (use ms excel)
+customer
+services 
+
+a. the month where we can bring discounts
+b. the month where we can bring surcharge
+c. give a coupon to a valuable customer who did not turnup over a certain period
+d. display the monthly sales of a year 
+e. divide the day into 4 parts and display the sales using a pie chart 
+
+2. Sweet shop
+inventory:
+
+
+a. which sweet sells more in a specific month
+b. when the company revenues are highest during the year
+c. yearly sales data comparision 
+d. which sweet was wasted the most
+
+3.coffee shop
+types of coffee available
+sources to buy coffee from
+
+a. from the past years of data of buying seeds and the sales, help the coffee shop to analyze and infer the best coffee seeds supplier
+b. compare the sales of instant and filter coffee
+c. enter customer feedback to help the coffee shop owner if water quantity should be increased or decreased
+d. with the sales data help the owner to compare the sales of coffee with sugar,jaggery and sugar free 
+
+4.
+5.
+6.
+7.
+8.
+
+
+
+
+
+learn bootstrap/tailwind 
+learn html linking to flask
+first develop web-app then bulid mobile-app(if want to become entrepreneur)
+
